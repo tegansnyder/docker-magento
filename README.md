@@ -60,3 +60,8 @@ If you want to find the IP of your docker interface you can ssh into it:
 * ifconfig
 * ssh IP.ADDR.OF.DOCKER (password vagrant)
 
+Listing docker containers:
+* docker ps
+
+Stopping a docker container:
+* docker stop CONTAINERID
