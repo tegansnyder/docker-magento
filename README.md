@@ -57,6 +57,10 @@ Then configure virtual box to port forward that port so you can access it from y
 
 ![alt text](https://raw.github.com/tegansnyder/docker-magento/master/vm-settings.png "Virtual Box Settings")
 
+Note after you make this change you will need to:
+* vagrant ssh
+* sudo /etc/init.d/networking restart
+
 Finally open your web browser to start the Magento installation:
 * http://127.0.0.1:8989/
 
@@ -72,6 +76,3 @@ Stopping a docker container:
 
 If you want to find the IP of your docker interface you can ssh into it:
 * docker inspect CONTAINERID
-
-Restarting network interface:
-* sudo /etc/init.d/networking restart
