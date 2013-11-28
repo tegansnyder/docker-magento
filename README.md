@@ -31,7 +31,10 @@ Access the VM and use Docker, Run vagrant ssh from the same directory:
 
 * vagrant ssh
 
-Once inside VM install git: 
+Once you are ssh'd inside the docker VM
+========================
+
+Install git:
 
 * sudo apt-get install git
 
@@ -49,7 +52,7 @@ Build the docker container you can tag it something other than "magneto" if you 
 
 Sit back and wait for 10-15 minutes while the magic happens!
 
-Next steps:
+Next steps (Still ssh'd inside docker VM):
 ========================
 
 Run your docker container by default it exposes port 80 if you want to override it use a colon:
@@ -63,6 +66,9 @@ Then configure virtual box to port forward that port so you can access it from y
 Note after you make this change you will need to:
 * vagrant ssh
 * sudo /etc/init.d/networking restart
+
+Final steps (exiting your docker VM ssh session or opening a new terminal tab):
+========================
 
 On your local computer not the VM create a host entry:
 * sudo vi /private/etc/hosts
