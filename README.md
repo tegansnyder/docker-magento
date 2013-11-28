@@ -34,7 +34,7 @@ Once inside VM install git:
 
 Grab the Magento repo:
 
-* git clone https://github.com/dmahlow/docker-magento.git
+* git clone https://github.com/tegansnyder/docker-magento.git
 
 Change directory to it:
 
