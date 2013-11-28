@@ -13,7 +13,7 @@ ADD apache_default_vhost /etc/apache2/sites-available/default
 
 RUN rm -fr /var/www
 
-ADD git clone https://github.com/magento/magento2.git /var/www/
+RUN git clone https://github.com/magento/magento2.git /var/www/
 
 RUN chown www-data:www-data -R /var/www
 
