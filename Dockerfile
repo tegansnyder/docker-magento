@@ -5,7 +5,7 @@ MAINTAINER Tegan Snyder "tsnyder@tegdesign.com"
 RUN echo 'deb mirror://mirrors.ubuntu.com/mirrors.txt precise main universe multiverse' > /etc/apt/sources.list
 
 RUN apt-get update
-RUN apt-get -y install apache2 php5 php5-curl php5-mcrypt php5-gd php5-mysql
+RUN apt-get -y install mysql-client mysql-server apache2 php5 php5-curl php5-mcrypt php5-gd php5-mysql vim-tiny
 
 RUN a2enmod rewrite
 
