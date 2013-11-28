@@ -37,3 +37,13 @@ cd docker-magento
 8. build the docker container
 docker build .
 
+Sit back and wait for 10-15 minutes while the magic happens
+
+Next steps:
+========================
+
+1. Find the IP of your docker interface
+ifconfig
+
+2. ssh IP.ADDR.OF.DOCKER (password vagrant)
+
