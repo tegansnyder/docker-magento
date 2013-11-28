@@ -49,9 +49,9 @@ Sit back and wait for 10-15 minutes while the magic happens!
 Next steps:
 ========================
 
-Run your docker container:
+Run your docker container by default it exposes port 80 if you want to override it use a colon:
 
-* docker run -d magento -p :8989
+* docker run -p 8989:80 -d magento
 
 
 Additional:
