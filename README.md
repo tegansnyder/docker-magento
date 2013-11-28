@@ -49,7 +49,14 @@ Sit back and wait for 10-15 minutes while the magic happens!
 Next steps:
 ========================
 
-Find the IP of your docker interface:
+Run your docker container:
+
+* docker run -d magento -p :8989
+
+
+Additional:
+========================
+If you want to find the IP of your docker interface you can ssh into it:
 * ifconfig
 * ssh IP.ADDR.OF.DOCKER (password vagrant)
 
