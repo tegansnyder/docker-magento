@@ -34,8 +34,8 @@ git clone https://github.com/dmahlow/docker-magento.git
 7. change directory to it
 cd docker-magento
 
-8. build the docker container
-docker build .
+8. build the docker container you can tag it something other than "magneto" if you want
+docker build -t="magento" .
 
 Sit back and wait for 10-15 minutes while the magic happens
 
