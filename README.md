@@ -65,3 +65,6 @@ Stopping a docker container:
 
 If you want to find the IP of your docker interface you can ssh into it:
 * docker inspect CONTAINERID
+
+Restarting network interface:
+* sudo /etc/init.d/networking restart
