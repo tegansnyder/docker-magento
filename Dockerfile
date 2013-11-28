@@ -20,6 +20,6 @@ RUN chown www-data:www-data -R /var/www
 # Make mysql listen on the outside
 run	sed -i 's/127.0.0.1/0.0.0.0/' /etc/mysql/my.cnf
 
-EXPOSE 80 3306
+EXPOSE 80
 
 CMD ["bash", "-c", "/usr/sbin/service apache2 start && tail -f /var/log/apache2/access.log"]
