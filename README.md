@@ -61,8 +61,15 @@ Note after you make this change you will need to:
 * vagrant ssh
 * sudo /etc/init.d/networking restart
 
+On your local computer not the VM create a host entry:
+* sudo vi /private/etc/hosts
+
+Add some entries:
+* 127.0.0.1 magento.dev
+* 127.0.0.1 www.magento.dev
+
 Finally open your web browser to start the Magento installation:
-* http://127.0.0.1:8989/
+* http://www.magento.dev:8989/
 
 
 Additional:
