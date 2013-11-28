@@ -2,6 +2,8 @@ Welcome
 ========================
 This will install a docker container with Magento 2. You can easily change the Dockerfile to pull in a different magento repo if you don't want to use Magento 2. If you are using a private repo make sure to do your git clone -v
 
+NOTE::: work in progress ... this is not stable or may not work yet... i will remove this note when it is ready.
+
 Getting Started
 ========================
 
