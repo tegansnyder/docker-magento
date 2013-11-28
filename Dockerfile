@@ -18,7 +18,7 @@ RUN git clone https://github.com/magento/magento2.git /var/www/
 RUN chown www-data:www-data -R /var/www
 
 # Make mysql listen on the outside
-run	sed -i 's/127.0.0.1/0.0.0.0/' /etc/mysql/my.cnf
+run sed -i 's/127.0.0.1/0.0.0.0/' /etc/mysql/my.cnf
 
 EXPOSE 80
 
