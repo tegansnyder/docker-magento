@@ -10,7 +10,7 @@ Install Vagrant:
 http://downloads.vagrantup.com/
 
 Install Docker:
-git clone https://github.com/dotcloud/docker.git
+* git clone https://github.com/dotcloud/docker.git
 
 
 Running the docker container:
