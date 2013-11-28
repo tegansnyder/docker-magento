@@ -11,12 +11,9 @@ RUN a2enmod rewrite
 
 ADD apache_default_vhost /etc/apache2/sites-available/default
 
-ADD http://www.magentocommerce.com/downloads/assets/1.8.0.0/magento-1.8.0.0.tar.gz /root/
-ADD http://www.magentocommerce.com/downloads/assets/1.6.1.0/magento-sample-data-1.6.1.0.tar.gz /root/
-
 RUN rm -fr /var/www
-RUN mv /root/magento /var/www
-RUN mv /root/magento-sample-data-1.6.1.0/media/* /var/www/media/
+
+ADD git clone https://github.com/magento/magento2.git /var/www/
 
 RUN chown www-data:www-data -R /var/www
 
