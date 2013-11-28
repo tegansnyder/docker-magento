@@ -42,10 +42,11 @@ RUN chown www-data:www-data -R /var/www
 
 ## MYSQL
 RUN apt-get install -y -q mysql-client mysql-server php5-mysql
-RUN mysqld & sleep 2 && mysqladmin create mydb
 
 # Make mysql listen on the outside
 run sed -i 's/127.0.0.1/0.0.0.0/' /etc/mysql/my.cnf
+
+RUN mysqld
 
 ENV DEBIAN_FRONTEND dialog
 
