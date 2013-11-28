@@ -53,6 +53,13 @@ Run your docker container by default it exposes port 80 if you want to override 
 
 * docker run -p 8989:80 -d magento
 
+Then configure virtual box to port forward that port so you can access it from you web browser:
+
+![alt text](https://raw.github.com/tegansnyder/docker-magento/master/vm-settings.png "Virtual Box Settings")
+
+Finally open your web browser to start the Magento installation:
+* http://127.0.0.1:8989/
+
 
 Additional:
 ========================
