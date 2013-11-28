@@ -16,42 +16,40 @@ git clone https://github.com/dotcloud/docker.git
 Running the docker container:
 ========================
 
-* Change directory to docker
+Change directory to docker:
 
-cd docker
+* cd docker
 
-* Run vagrant from the sources directory
+Run vagrant from the sources directory:
 
-vagrant up
+* vagrant up
 
-* Next: To access the VM and use Docker, Run vagrant ssh from the same directory.
+Access the VM and use Docker, Run vagrant ssh from the same directory:
 
-vagrant ssh
+* vagrant ssh
 
-* Once inside VM install git: 
+Once inside VM install git: 
 
-sudo apt-get install git
+* sudo apt-get install git
 
-* grab the Magento repo
+Grab the Magento repo:
 
-git clone https://github.com/dmahlow/docker-magento.git
+* git clone https://github.com/dmahlow/docker-magento.git
 
-* change directory to it
+Change directory to it:
 
-cd docker-magento
+* cd docker-magento
 
-* build the docker container you can tag it something other than "magneto" if you want
+Build the docker container you can tag it something other than "magneto" if you want:
 
-docker build -t="magento" .
+* docker build -t="magento" .
 
-* Sit back and wait for 10-15 minutes while the magic happens
+Sit back and wait for 10-15 minutes while the magic happens!
 
 Next steps:
 ========================
 
-* Find the IP of your docker interface
-
-ifconfig
-
+Find the IP of your docker interface:
+* ifconfig
 * ssh IP.ADDR.OF.DOCKER (password vagrant)
 
