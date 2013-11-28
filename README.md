@@ -3,11 +3,14 @@ Getting Started
 
 Requirements:
 
+Install Git:
+* http://git-scm.com/downloads
+
 Install VirtualBox:
-https://www.virtualbox.org/
+* https://www.virtualbox.org/
 
 Install Vagrant:
-http://downloads.vagrantup.com/
+* http://downloads.vagrantup.com/
 
 Install Docker:
 * git clone https://github.com/dotcloud/docker.git
