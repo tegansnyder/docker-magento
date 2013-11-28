@@ -5,7 +5,7 @@ MAINTAINER Tegan Snyder "tsnyder@tegdesign.com"
 RUN echo 'deb mirror://mirrors.ubuntu.com/mirrors.txt precise main universe multiverse' > /etc/apt/sources.list
 
 RUN apt-get update
-RUN apt-get -y install mysql-client mysql-server apache2 php5 php5-curl php5-mcrypt php5-gd php5-mysql vim-tiny
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server apache2 php5 php5-curl php5-mcrypt php5-gd php5-mysql vim-tiny
 
 RUN a2enmod rewrite
 
@@ -19,9 +19,6 @@ RUN mv /root/magento /var/www
 RUN mv /root/magento-sample-data-1.6.1.0/media/* /var/www/media/
 
 RUN chown www-data:www-data -R /var/www
-
-# Install mysql-server in non-interactive mode
-run	bash -c "export DEBIAN_FRONTEND=noninteractive; apt-get -q -y install mysql-server-5.5"
 
 # Make mysql listen on the outside
 run	sed -i 's/127.0.0.1/0.0.0.0/' /etc/mysql/my.cnf
