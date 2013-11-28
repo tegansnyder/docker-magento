@@ -56,12 +56,12 @@ Run your docker container by default it exposes port 80 if you want to override 
 
 Additional:
 ========================
-If you want to find the IP of your docker interface you can ssh into it:
-* ifconfig
-* ssh IP.ADDR.OF.DOCKER (password vagrant)
 
 Listing docker containers:
 * docker ps
 
 Stopping a docker container:
 * docker stop CONTAINERID
+
+If you want to find the IP of your docker interface you can ssh into it:
+* docker inspect CONTAINERID
