@@ -43,6 +43,9 @@ RUN git clone https://github.com/tegansnyder/magento-ce-1.8.git /var/www/magento
 # optional
 ADD phpinfo.php /var/www/magento/
 
+# change servername
+# RUN echo 'ServerName 127.0.0.1:80' >> /etc/httpd/conf/httpd.conf
+
 # setup virtual hosts
 ADD magento.conf /etc/httpd/conf.d/
 
