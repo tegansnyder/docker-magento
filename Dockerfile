@@ -18,7 +18,7 @@ RUN yum install -y mysql mysql-server
 RUN echo "NETWORKING=yes" > /etc/sysconfig/network
 
 # Make mysql listen on the outside
-run sed -i 's/127.0.0.1/0.0.0.0/' /etc/mysql/my.cnf
+run sed -i 's/127.0.0.1/0.0.0.0/' /etc/my.cnf
 
 # start mysqld to create initial tables
 RUN service mysqld start
