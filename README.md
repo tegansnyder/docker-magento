@@ -88,6 +88,7 @@ Add some entries:
 Finally open your web browser to start the Magento installation:
 * http://www.magento.dev:8989/
 
+![alt text](https://raw.github.com/tegansnyder/docker-magento/master/magento-setup.png "Magento Setup")
 
 Additional:
 ========================
