@@ -47,8 +47,9 @@ ADD phpinfo.php /var/www/magento/
 ADD magento.conf /etc/httpd/conf.d/
 
 # set file permissions for Magento
-RUN chmod -R o+w media var
-RUN chmod o+w app/etc
+RUN chmod -R o+w /var/www/magento/media 
+RUN chmod -R o+w /var/www/magento/var
+RUN chmod o+w /var/www/magento/app/etc
 
 RUN chown apache:apache -R /var/www/magento
 
