@@ -52,6 +52,8 @@ Change directory to it:
 
 * cd docker-magento
 
+* Optionally change the root SSH password in the Dockerfile defaults to "changeme"
+
 Build the docker container you can tag it something other than "magneto" if you want:
 
 * sudo docker build -t="magento" .
