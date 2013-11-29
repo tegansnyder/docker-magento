@@ -98,3 +98,6 @@ Stopping a docker container:
 
 If you want to find the IP of your docker interface you can ssh into it:
 * docker inspect CONTAINERID
+
+Once you find the IP of it you can SSH from your Vagrant VM into your Docker VM if you need to tune anything using the password you set in the Dockerfile... (defaults to "changeme")
+* ssh root@DOCKER_IP
