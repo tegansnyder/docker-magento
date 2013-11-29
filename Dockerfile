@@ -53,6 +53,14 @@ RUN chmod o+w /var/www/magento/app/etc
 
 RUN chown apache:apache -R /var/www/magento
 
+# install modman
+RUN bash < <(wget -O - https://raw.github.com/colinmollenhour/modman/master/modman-installer)
+
+#install n98-magerun
+RUN wget https://raw.github.com/netz98/n98-magerun/master/n98-magerun.phar
+RUN chmod +x ./n98-magerun.phar
+RUN cp ./n98-magerun.phar /usr/local/bin/
+
 ADD supervisord.conf /etc/
 
 EXPOSE 22 80 3360
