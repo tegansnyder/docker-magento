@@ -36,12 +36,12 @@ RUN yum install -y openssh-server openssh-clients passwd
 RUN ssh-keygen -q -N "" -t dsa -f /etc/ssh/ssh_host_dsa_key && ssh-keygen -q -N "" -t rsa -f /etc/ssh/ssh_host_rsa_key 
 RUN sed -ri 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config && echo 'root:changeme' | chpasswd
 
-RUN rm -fr /var/www/html
+RUN rm -fr /var/www/magento
 
-RUN git clone https://github.com/tegansnyder/magento-ce-1.8.git /var/www/html/
+RUN git clone https://github.com/tegansnyder/magento-ce-1.8.git /var/www/magento/
 
 # optional
-ADD phpinfo.php /var/www/html/
+ADD phpinfo.php /var/www/magento/
 
 # setup virtual hosts
 ADD magento.conf /etc/httpd/conf.d/
@@ -50,7 +50,7 @@ ADD magento.conf /etc/httpd/conf.d/
 RUN chmod -R o+w media var
 RUN chmod o+w app/etc
 
-RUN chown apache:apache -R /var/www/html
+RUN chown apache:apache -R /var/www/magento
 
 ADD supervisord.conf /etc/
 
