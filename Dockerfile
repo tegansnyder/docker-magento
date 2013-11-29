@@ -40,7 +40,7 @@ RUN sed -ri 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config && echo 'root:change
 
 RUN rm -fr /var/www/html
 
-RUN git clone https://github.com/magento/magento2.git /var/www/html/
+RUN git clone https://github.com/tegansnyder/magento-ce-1.8.git /var/www/html/
 
 ADD supervisord.conf /etc/
 
