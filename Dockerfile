@@ -43,6 +43,9 @@ RUN git clone https://github.com/tegansnyder/magento-ce-1.8.git /var/www/html/
 # optional
 ADD phpinfo.php /var/www/html/
 
+# setup virtual hosts
+ADD magento.conf /etc/httpd/conf.d/
+
 # set file permissions for Magento
 RUN chmod -R o+w media var
 RUN chmod o+w app/etc
