@@ -73,7 +73,7 @@ Note after you make this change you will need to:
 * vagrant ssh
 * sudo /etc/init.d/networking restart
 
-Final steps *(exiting your docker VM ssh session or opening a new terminal tab)*:
+Final steps
 ========================
 
 On your local computer not the VM create a host entry:
