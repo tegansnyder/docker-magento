@@ -5,6 +5,10 @@ MAINTAINER Tegan Snyder <tsnyder@tegdesign.com>
 RUN rpm -Uvh --force http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 RUN rpm -Uvh --force http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 
+# Update Current Image
+RUN yum install -y libcom_err
+RUN yum update -y
+
 # INSTALL httpd
 RUN yum -y install httpd vim-enhanced bash-completion unzip
 
