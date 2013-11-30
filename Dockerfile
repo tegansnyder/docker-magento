@@ -45,7 +45,7 @@ ADD phpinfo.php /var/www/magento/
 
 # setup mysql database and user for magento
 ADD setup.sql /var/www/
-RUN mysql -u root < /var/www/setup.sql
+RUN mysql -h localhost -u root < /var/www/setup.sql
 
 # change servername
 # RUN echo 'ServerName 127.0.0.1:80' >> /etc/httpd/conf/httpd.conf
