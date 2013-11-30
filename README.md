@@ -86,8 +86,9 @@ Add some entries:
 Finally open your web browser to start the Magento installation:
 * http://www.magento.dev:8989/
 
-Note: the mysql database and password are set in "mysqlsetup.sh" not "setup.sql"... the screenshot below is wrong:
-![alt text](https://raw.github.com/tegansnyder/docker-magento/master/magento-setup.png "Magento Setup")
+When you are on the Magento installation screen you need to set the mysql username and password. The docker build script defaults to user: "magento" pass: "changeme". You also need to turn off "Base URL validation". Screenshot below:
+
+![alt text](https://raw.github.com/tegansnyder/docker-magento/8e4969c4da1309cf4a8157bdda6d1f1f00f2f860/magento-setup.png "Magento Setup")
 
 Additional:
 ========================
