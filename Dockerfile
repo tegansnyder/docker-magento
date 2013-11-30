@@ -60,21 +60,10 @@ ADD phpinfo.php /var/www/magento/
 ADD magento.conf /etc/httpd/conf.d/
 
 # set file permissions for Magento
-RUN chmod -R o+w /var/www/magento/media 
 RUN chmod -R o+w /var/www/magento/var
 RUN chmod o+w /var/www/magento/app/etc
 
 RUN chown apache:apache -R /var/www/magento
-
-# install modman
-ADD modman.sh /tmp/modman.sh
-RUN chmod +x /tmp/modman.sh
-RUN /tmp/modman.sh
-
-#install n98-magerun
-RUN wget https://raw.github.com/netz98/n98-magerun/master/n98-magerun.phar
-RUN chmod +x ./n98-magerun.phar
-RUN cp ./n98-magerun.phar /usr/local/bin/
 
 ADD supervisord.conf /etc/
 
