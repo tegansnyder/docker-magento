@@ -24,7 +24,7 @@ run sed -i 's/127.0.0.1/0.0.0.0/' /etc/my.cnf
 RUN service mysqld start
 
 # setup mysql database and user for magento
-ADD mysqlsetup.sql /tmp/mysqlsetup.sql
+ADD mysqlsetup.sh /tmp/mysqlsetup.sh
 RUN chmod +x /tmp/mysqlsetup.sh
 RUN /tmp/mysqlsetup.sh
 
