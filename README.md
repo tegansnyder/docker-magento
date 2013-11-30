@@ -2,8 +2,8 @@ Welcome
 ========================
 This will install a docker container with Magento CE 1.8. You can easily change the Dockerfile to pull in a different Magento repo. If you are using a private repo make sure to do your git clone -v
 
-@TODO: 
-* Update PHP to version 5.5 to support Magento 2. Add REMI / EPEL repos to get MySQL 5.5 and PHP 5.5.
+> @TODO: 
+> * Update PHP to version 5.5 to support Magento 2. Add REMI / EPEL repos to get MySQL 5.5 and PHP 5.5.
 
 Getting Started
 ========================
