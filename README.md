@@ -55,13 +55,13 @@ Change directory to it:
 
 Build the docker container you can tag it something other than "magneto" if you want:
 
-* sudo docker build -t="magento" .
+* sudo docker build -t="magento2" .
 
 ###### Sit back and wait for 10-15 minutes while the magic happens!
 
 When finished building you will need to run your docker container. By default it exposes port 80 but I suggest you override it to a non-standard port:
 
-* sudo docker run -p 8989:80 -d magento
+* sudo docker run -p 8989:80 -d magento2
 
 Then configure virtual box to port forward that port so you can access it from you web browser:
 
