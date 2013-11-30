@@ -23,10 +23,6 @@ run sed -i 's/127.0.0.1/0.0.0.0/' /etc/my.cnf
 # start mysqld to create initial tables
 RUN service mysqld start
 
-# setup mysql database and user for magento
-ADD setup.sql /var/www/
-RUN mysql -u root < /var/www/setup.sql
-
 # INSTALL php
 RUN yum install -y php php-pdo php-soap php-devel php-pecl-apc php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml php-mcrypt
 
@@ -46,6 +42,10 @@ RUN git clone https://github.com/tegansnyder/magento-ce-1.8.git /var/www/magento
 
 # optional
 ADD phpinfo.php /var/www/magento/
+
+# setup mysql database and user for magento
+ADD setup.sql /var/www/
+RUN mysql -u root < /var/www/setup.sql
 
 # change servername
 # RUN echo 'ServerName 127.0.0.1:80' >> /etc/httpd/conf/httpd.conf
