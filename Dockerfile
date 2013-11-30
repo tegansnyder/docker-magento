@@ -25,7 +25,8 @@ RUN service mysqld start
 
 # setup mysql database and user for magento
 ADD mysqlsetup.sql /tmp/mysqlsetup.sql
-CMD ["/tmp/mysqlsetup.sh"]
+RUN chmod +x /tmp/mysqlsetup.sh
+RUN /tmp/mysqlsetup.sh
 
 # INSTALL php
 RUN yum install -y php php-pdo php-soap php-devel php-pecl-apc php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml php-mcrypt
@@ -64,7 +65,8 @@ RUN chown apache:apache -R /var/www/magento
 
 # install modman
 ADD modman.sh /tmp/modman.sh
-CMD ["/tmp/modman.sh"]
+RUN chmod +x /tmp/modman.sh
+RUN /tmp/modman.sh
 
 #install n98-magerun
 RUN wget https://raw.github.com/netz98/n98-magerun/master/n98-magerun.phar
