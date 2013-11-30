@@ -88,6 +88,7 @@ Add some entries:
 Finally open your web browser to start the Magento installation:
 * http://www.magento.dev:8989/
 
+Note: the mysql database and password are set in "mysqlsetup.sh" not "setup.sql"... the screenshot below is wrong:
 ![alt text](https://raw.github.com/tegansnyder/docker-magento/master/magento-setup.png "Magento Setup")
 
 Additional:
