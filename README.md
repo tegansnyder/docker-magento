@@ -59,12 +59,9 @@ Build the docker container you can tag it something other than "magneto" if you 
 
 * sudo docker build -t="magento" .
 
-Sit back and wait for 10-15 minutes while the magic happens!
+###### Sit back and wait for 10-15 minutes while the magic happens!
 
-Next steps (Still ssh'd inside docker VM):
-========================
-
-Run your docker container by default it exposes port 80 if you want to override it use a colon:
+When finished building you will need to run your docker container. By default it exposes port 80 but I suggest you override it to a non-standard port:
 
 * sudo docker run -p 8989:80 -d magento
 
@@ -76,7 +73,7 @@ Note after you make this change you will need to:
 * vagrant ssh
 * sudo /etc/init.d/networking restart
 
-Final steps (exiting your docker VM ssh session or opening a new terminal tab):
+Final steps *(exiting your docker VM ssh session or opening a new terminal tab)*:
 ========================
 
 On your local computer not the VM create a host entry:
