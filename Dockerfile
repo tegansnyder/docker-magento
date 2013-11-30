@@ -44,7 +44,7 @@ RUN sed -ri 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config && echo 'root:change
 
 RUN rm -fr /var/www/magento
 
-RUN git clone https://github.com/tegansnyder/magento-ce-1.8.git /var/www/magento/
+RUN git clone https://github.com/magento/magento2.git /var/www/magento/
 
 # optional
 ADD phpinfo.php /var/www/magento/
