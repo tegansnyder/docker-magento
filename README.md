@@ -1,6 +1,6 @@
 Welcome
 ========================
-This will install a docker container with Magento 2.
+This will install a docker container with Magento 2. NOTE: I haven't tested this to see if it works yet :)
 
 
 Getting Started
